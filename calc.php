@@ -1,4 +1,9 @@
+<style type="text/css">
+	* {
+					font-family: 'Kanit', sans-serif;font-size:20pt;
 
+	}
+</style>
 
 <?php
 
@@ -91,18 +96,18 @@ function calcTC(){
 	else if($ldl <160) 	{$b="พอใช้ Borderline"; $n="ไขมันแอลดีแอลค่อนข้างสูง";}
 	else if($ldl <190) 	{$b="ไม่ดีHign"; $n="ไขมันแอลดีแอลสูง";}
 	else 				{$b="ไม่ดีมาก Severely high"; $n="อันตราย!!!";}
-	echo "LDL =".$ldl." mg/DL <br><b>".$b."</b><br>".$n."<br><br>";
+	echo "LDL =".$ldl." mg/DL <br><b>".$b."</b><br>".$n."<br><hr>";
 
 	if ($hdl >60){ 		$h="ดีมาก Good"	;}
 	else if($hdl >40){	$h="ค่อนข้างเสี่ยงที่จะเป็นโรคหัวใจ Borderline risk"	;}
 	else{				$h="มีความเสี่ยงสูงที่จะเป็นโรคหัวใจHigh risk"	;}
-	echo "HDL =".$hdl." mg/DL <br><b>".$h."</b><br><br>";
+	echo "HDL =".$hdl." mg/DL <br><b>".$h."</b><br><hr>";
 
 	if ($trc <150) 		{$h="ดีมาก Ideal" ;}
 	else if($trc <200) 	{$h="สูงเล็กน้อยElevated";}
 	else if($trc <500) 	{$h="สูง High" ;}
 	else 				{$h="สูงมากExtremely high"; }
-	echo "Triglycerides =".$trc." mg/DL <br><b>".$h."</b><br><br>";
+	echo "Triglycerides =".$trc." mg/DL <br><b>".$h."</b><br><hr>";
 
 	$tc = $ldl+$hdl+($trc/5);
 	if ($tc <200) 		{$t="ดีมาก Ideal";}
